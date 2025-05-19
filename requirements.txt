@@ -33,7 +33,7 @@ pandas
 patsy
 pillow
 pkgutil_resolve_name
-protobuf
+protobuf<=3.20.3
 pyarrow==20.0.0
 pycparser
 pydeck
