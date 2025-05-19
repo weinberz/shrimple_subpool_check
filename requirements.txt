@@ -49,6 +49,7 @@ scipy
 seaborn
 six
 smmap
+standard-imghdr
 statsmodels
 streamlit
 tenacity
