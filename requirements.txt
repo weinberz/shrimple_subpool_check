@@ -1,4 +1,4 @@
-altair<5
+altair
 attrs
 biopython
 blinker
@@ -33,7 +33,7 @@ pandas
 patsy
 pillow
 pkgutil_resolve_name
-protobuf<=3.20.3
+protobuf
 pyarrow==20.0.0
 pycparser
 pydeck
@@ -51,7 +51,7 @@ six
 smmap
 standard-imghdr
 statsmodels
-streamlit
+streamlit>=1.45
 tenacity
 toml
 tornado
