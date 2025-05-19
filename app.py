@@ -51,6 +51,7 @@ if st.button("Run QC Analysis"):
     with st.spinner("Running analysis... this may take a few minutes."):
         # Mock processing - replace with your actual script call
         
+        %
         results_df = process_fastqs(
             file_info,
             (genetic_background, background_map[genetic_background])
@@ -95,7 +96,7 @@ if st.button("Run QC Analysis"):
 
         st.altair_chart(chart, use_container_width=True)
 
-        st.subheader("Reads per Subpool")
+        st.subheader("Variants Matched to Correct Barcode per Subpool")
         
         subpool_counts = (results_df
                           .query('barcode_found == True')
@@ -112,7 +113,7 @@ if st.button("Run QC Analysis"):
         
         chart = alt.Chart(reads_per_subpool).mark_bar().encode(
             x=alt.X('subpool:N', title='Subpool', axis=alt.Axis(labelAngle=45, labelLimit=1000)),
-            y=alt.Y('Value:Q', title='Fraction Found'),
+            y=alt.Y('Value:Q', title='Fraction of Variants Matched to Correct Barcode'),
             color=alt.Color('subpool:N'),
             tooltip=['subpool:N', 'Category:N', 'Value:Q'],
         ).properties(
