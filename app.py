@@ -51,7 +51,6 @@ if st.button("Run QC Analysis"):
     with st.spinner("Running analysis... this may take a few minutes."):
         # Mock processing - replace with your actual script call
         
-        %
         results_df = process_fastqs(
             file_info,
             (genetic_background, background_map[genetic_background])
