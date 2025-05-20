@@ -170,7 +170,7 @@ def analyze_sequences(df_labeled, barcode_map, reference_dna, background_barcode
         }
 
         if not variant_barcode:
-            result['reason'] = 'WT barcode not found or invalid position'
+            result['reason'] = 'Background barcode not found or invalid position'
             results.append(result)
             continue
 
